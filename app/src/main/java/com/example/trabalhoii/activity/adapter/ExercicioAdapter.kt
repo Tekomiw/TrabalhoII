@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageButton
 import android.widget.TextView
+import com.example.trabalhoii.R
 import com.example.trabalhoii.data.model.Exercicio
 import com.example.trabalhoii.data.model.Treino
 
