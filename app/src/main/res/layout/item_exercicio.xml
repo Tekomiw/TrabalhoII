@@ -7,27 +7,27 @@
     android:gravity="center_vertical">
 
     <TextView
-        android:id="@+id/textViewNomeAluno"
+        android:id="@+id/textViewNomeExercicio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Nome do Aluno"
+        android:text="Nome do Exercicio"
         android:textSize="16sp"/>
 
     <ImageButton
-        android:id="@+id/buttonEditarAluno"
+        android:id="@+id/buttonEditarExercicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="Editar Aluno"
+        android:contentDescription="Editar Exercicio"
         android:src="@drawable/baseline_edit_24"
         android:background="?attr/selectableItemBackground"
         android:layout_marginEnd="8dp"/>
 
     <ImageButton
-        android:id="@+id/buttonDeletarAluno"
+        android:id="@+id/buttonDeletarExercicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/baseline_delete_24"
-        android:contentDescription="Deletar Aluno"
+        android:contentDescription="Deletar Exercicio"
         android:background="?attr/selectableItemBackground"/>
 </LinearLayout>
