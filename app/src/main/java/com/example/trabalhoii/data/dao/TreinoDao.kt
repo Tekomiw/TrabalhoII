@@ -20,7 +20,7 @@ interface TreinoDao {
 
     @Transaction
     @Query("SELECT * FROM treino WHERE alunoId = :alunoId")
-    suspend fun getTreinoByAlunoId(alunoId: Int): List<Aluno>
+    suspend fun getTreinoByAlunoId(alunoId: Int): List<Treino>
 
     @Update
     suspend fun updateTreino(treino: Treino)

@@ -10,6 +10,7 @@ import android.widget.TextView
 import com.example.trabalhoii.R
 import com.example.trabalhoii.data.model.Exercicio
 import com.example.trabalhoii.data.model.Treino
+import org.w3c.dom.Text
 
 class ExercicioAdapter (
     context: Context,
@@ -24,15 +25,17 @@ class ExercicioAdapter (
         val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.item_exercicio, parent, false)
 
         val textViewNome = view.findViewById<TextView>(R.id.textViewNomeExercicio)
+        val textViewGrupo = view.findViewById<TextView>(R.id.textViewGrupoExercicio)
         val buttonEditar = view.findViewById<ImageButton>(R.id.buttonEditarExercicio)
         val buttonDeletar = view.findViewById<ImageButton>(R.id.buttonDeletarExercicio)
 
         val treino = treinos.firstOrNull {it.id == exercicio.treinoId}
 
+        textViewGrupo.text = exercicio.grupoMuscular
         textViewNome.text = if(treino != null) {
-            "${exercicio.nome} - ${treino.nome}"
+            "${exercicio.nome} - ${exercicio.grupoMuscular} - ${treino.nome}"
         } else{
-            exercicio.nome
+            "${exercicio.nome} - ${exercicio.grupoMuscular}"
         }
 
         buttonEditar.setOnClickListener {

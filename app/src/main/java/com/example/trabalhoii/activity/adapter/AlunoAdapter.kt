@@ -23,10 +23,12 @@ class AlunoAdapter (
         val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.item_aluno, parent, false)
 
         val textViewNome = view.findViewById<TextView>(R.id.textViewNomeAluno)
+        val textViewIdade = view.findViewById<TextView>(R.id.textViewIdadeAluno)
         val buttonEditar = view.findViewById<ImageButton>(R.id.buttonEditarAluno)
         val buttonDeletar = view.findViewById<ImageButton>(R.id.buttonDeletarAluno)
 
         textViewNome.text = aluno.nome
+        textViewIdade.text = aluno.idade.toString()
 
         buttonEditar.setOnClickListener {
             onEdit(aluno)

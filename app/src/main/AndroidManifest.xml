@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TrabalhoII">
         <activity
+            android:name=".activity.ExercicioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.TreinoActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.AlunoActivity"
             android:exported="false" />
         <activity

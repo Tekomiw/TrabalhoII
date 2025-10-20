@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/activity_aluno"
+    android:id="@+id/activity_exercicio"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -13,18 +13,24 @@
         android:padding="8dp">
 
         <EditText
-            android:id="@+id/editTextAlunoNome"
+            android:id="@+id/editTextExercicioNome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nome do Aluno"
+            android:hint="Nome do Treino"
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editTextAlunoIdade"
+            android:id="@+id/editTextExercicioGrupo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:hint="Idade do Aluno"/>
+            android:hint="Grupo Muscular"/>
+
+        <Spinner
+            android:id="@+id/spinnerTreino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -34,7 +40,7 @@
             android:layout_gravity="end">
 
             <Button
-                android:id="@+id/buttonAdicionarAluno"
+                android:id="@+id/buttonAdicionarExercicio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Adicionar"
@@ -42,7 +48,7 @@
                 android:layout_gravity="end"/>
 
             <Button
-                android:id="@+id/buttonVoltarAluno"
+                android:id="@+id/buttonVoltarExercicio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Voltar"
@@ -51,12 +57,8 @@
         </LinearLayout>
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="16dp"/>
-
     <ListView
-        android:id="@+id/listViewAlunos"
+        android:id="@+id/listViewExercicios"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>

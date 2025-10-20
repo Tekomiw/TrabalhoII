@@ -25,15 +25,17 @@ class TreinoAdapter (
         val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.item_treino, parent, false)
 
         val textViewNome = view.findViewById<TextView>(R.id.textViewNomeTreino)
+        val textViewObjetivo = view.findViewById<TextView>(R.id.textViewObjetivoTreino)
         val buttonEditar = view.findViewById<ImageButton>(R.id.buttonEditarTreino)
         val buttonDeletar = view.findViewById<ImageButton>(R.id.buttonDeletarTreino)
 
         val aluno = alunos.firstOrNull {it.id == treino.alunoId}
 
+        textViewObjetivo.text = treino.objetivo
         textViewNome.text = if(aluno != null) {
-            "${treino.nome} - ${aluno.nome}"
+            "${treino.nome} - ${treino.objetivo} -  ${aluno.nome}"
         } else{
-            treino.nome
+            "${treino.nome} - ${treino.objetivo}"
         }
 
         buttonEditar.setOnClickListener {

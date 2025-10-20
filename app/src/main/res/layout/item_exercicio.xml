@@ -14,6 +14,14 @@
         android:text="Nome do Exercicio"
         android:textSize="16sp"/>
 
+    <TextView
+        android:id="@+id/textViewGrupoExercicio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Grupo Muscular"
+        android:textSize="16sp"/>
+
     <ImageButton
         android:id="@+id/buttonEditarExercicio"
         android:layout_width="wrap_content"
